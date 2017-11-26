@@ -1,0 +1,51 @@
+{
+  "name": "fluent",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "author": "Brian Cavalier <brian@briancavalier.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@briancavalier/assert": "^3.4.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.26.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "flow-bin": "^0.59.0",
+    "flow-copy-source": "^1.2.1",
+    "mocha": "^4.0.1",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.3.0",
+    "rollup": "^0.52.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "scripts": {
+    "build": "rollup -c && flow-copy-source -i '*.test.js' src dist",
+    "test:lint": "standard --fix --verbose 'src/**/*.js' | snazzy",
+    "test:typecheck": "flow check",
+    "test:unit": "nyc mocha -r babel-register src/**/*.test.js",
+    "test": "run-p test:lint test:typecheck test:unit",
+    "prepare": "run-s build"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "flow"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ]
+  },
+  "dependencies": {
+    "@most/core": "^1.0.1",
+    "@most/types": "^1.0.0"
+  }
+}
