@@ -62,9 +62,9 @@
     lodash.isequal "^4.5.0"
     object-inspect "^1.2.1"
 
-"@most/core@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@most/core/-/core-1.0.1.tgz#d1a876150827172de3ffb264285e776624496e6b"
+"@most/core@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@most/core/-/core-1.0.2.tgz#df38f2391bb817fea08af25a4b2fefd5f8a848f1"
   dependencies:
     "@most/disposable" "^1.0.0"
     "@most/prelude" "^1.6.4"
