@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mostjs/x-fluent.svg?branch=master)](https://travis-ci.org/mostjs/x-fluent)
+
 **EXPERIMENTAL** This is an experimental package.
 
 # @most/fluent
