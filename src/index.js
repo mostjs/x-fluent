@@ -16,11 +16,11 @@ export class FluentStream <A> {
     return new FluentStream(f(this.stream))
   }
 
-  to <B> (f: Stream<A> => B): B {
+  apply <B> (f: Stream<A> => B): B {
     return f(this.stream)
   }
 
   run (sink: Sink<A>, scheduler: Scheduler): Disposable {
-    return this.to(run(sink, scheduler))
+    return this.apply(run(sink, scheduler))
   }
 }

@@ -10,21 +10,7 @@ Use `@most/core` with a fluent API.  `@most/fluent` wraps a `@most/core` Stream 
 
 `yarn add @most/fluent`
 
-## Types
-
-### FluentStream
-
-*info coming soon*
-
-## API
-
-### fluently :: Stream a &rarr; FluentStream a
-
-Wrap a `@most/core` Stream in a FluentStream.
-
-### thru :: FluentStream a ~> (Stream a &rarr; Stream b) &rarr; FluentStream b
-
-Apply functions fluently to a Stream, wrapping the result in a FluentStream.  Use `thru` when you want to continue dot-chaining other Stream operations.
+## Example
 
 ```js
 import { change } from `@most/dom-event`
@@ -41,8 +27,31 @@ const changesFluent = fluently(changes)
   .thru(filter(value => value.length > 0))
 ```
 
-### to :: FluentStream a ~> (Stream a &rarr; b) &rarr; b
+## Types
 
-Apply functions fluently to a Stream, _without_ wrapping the result.  Use `to` to return something other than a Stream.
+### FluentStream
 
-*example coming soon*
+A FluentStream is a [Stream](http://mostcore.readthedocs.io/en/latest/api.html#stream) with two additional methods that enable fluent (dot-chaining) usage.
+
+```js
+type FluentStream<A> = Stream<A> & {
+  thru <B> (f: (Stream<A>) => Stream<B>): FluentStream<B>
+  apply <B> (f: (Stream<A>) => B): B
+}
+```
+
+## API
+
+### fluently :: Stream a &rarr; FluentStream a
+
+Wrap a `@most/core` Stream in a FluentStream.
+
+### FluentStream methods
+
+#### thru :: FluentStream a ~> (Stream a &rarr; Stream b) &rarr; FluentStream b
+
+Apply functions fluently to a Stream, wrapping the result in a FluentStream.  Use `thru` when you want to continue dot-chaining other Stream operations.
+
+#### apply :: FluentStream a ~> (Stream a &rarr; b) &rarr; b
+
+Apply functions fluently to a Stream, _without_ re-wrapping the result.  Use `apply` to return something other than a Stream.

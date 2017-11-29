@@ -19,9 +19,9 @@ const eqEventValues = <A>(s1: Stream<A>, s2: Stream<A>): Promise<*> =>
       eq(expectedEvents, actualEvents)))
 
 describe('fluently', () => {
-  it('fluently(s).to(identity) === s', () => {
+  it('fluently(s).apply(identity) === s', () => {
     const s = now(1)
-    is(s, fluently(s).to(identity))
+    is(s, fluently(s).apply(identity))
   })
 
   it('fluently(s).thru(f) ~= fluently(f(s))', () => {
