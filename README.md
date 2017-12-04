@@ -4,7 +4,7 @@
 
 # @most/fluent
 
-Use `@most/core` with a fluent API.  `@most/fluent` wraps a `@most/core` Stream in a FluentStream type that provides `thru` and `to` methods for dot-chaining.
+Use `@most/core` with a fluent API.  `@most/fluent` wraps a `@most/core` Stream in a FluentStream type that provides `thru` and `apply` methods for dot-chaining.
 
 ## Get it
 
