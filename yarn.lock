@@ -89,9 +89,9 @@
     "@most/prelude" "^1.6.4"
     "@most/types" "^1.0.0"
 
-"@most/types@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@most/types/-/types-1.0.0.tgz#5c301d2437342a1b82e38463fdb94e1bafe2c6d9"
+"@most/types@^1.0.0", "@most/types@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@most/types/-/types-1.0.2.tgz#a272c919a3dafe942bd02d63402f0548593af870"
 
 abbrev@1:
   version "1.1.1"
