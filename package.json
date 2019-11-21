@@ -47,6 +47,6 @@
     ]
   },
   "dependencies": {
-    "@most/types": "^1.0.0"
+    "@most/types": "^1.0.2"
   }
 }
