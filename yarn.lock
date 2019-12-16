@@ -89,7 +89,7 @@
     "@most/prelude" "^1.7.3"
     "@most/types" "^1.0.2"
 
-"@most/types@^1.0.0", "@most/types@^1.0.2":
+"@most/types@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@most/types/-/types-1.0.2.tgz#a272c919a3dafe942bd02d63402f0548593af870"
 
@@ -1575,9 +1575,9 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-flow-bin@^0.59.0:
-  version "0.59.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.59.0.tgz#8c151ee7f09f1deed9bf0b9d1f2e8ab9d470f1bb"
+flow-bin@^0.114.0:
+  version "0.114.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.114.0.tgz#9079c5fcdf08fab4db91616f38994e9b7d035842"
 
 flow-copy-source@^1.2.1:
   version "1.2.1"
