@@ -23,7 +23,7 @@
     "nyc": "^11.3.0",
     "rollup": "^0.52.0",
     "rollup-plugin-babel": "^3.0.2",
-    "snazzy": "^7.0.0",
+    "snazzy": "^9.0.0",
     "standard": "^10.0.3"
   },
   "scripts": {
