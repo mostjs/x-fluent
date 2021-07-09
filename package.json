@@ -16,7 +16,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-register": "^6.26.0",
     "eslint-plugin-flowtype": "^2.39.1",
-    "flow-bin": "^0.59.0",
+    "flow-bin": "^0.155.0",
     "flow-copy-source": "^1.2.1",
     "mocha": "^4.0.1",
     "npm-run-all": "^4.1.5",
